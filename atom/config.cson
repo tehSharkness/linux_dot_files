@@ -1,0 +1,33 @@
+"*":
+  "autocomplete-plus":
+    autoActivationDelay: 10
+    confirmCompletion: "enter"
+    minimumWordLength: 6
+  core:
+    audioBeep: false
+    projectHome: "/home/harkness/Documents"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+    useProxySettingsWhenCallingApm: false
+  editor:
+    preferredLineLength: 72
+    showIndentGuide: true
+    showInvisibles: true
+    softWrapHangingIndent: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "0fe8d493-f82e-44ec-80de-9cf3c1fd1bbd"
+  "git-blame":
+    columnWidth: 341
+  "linter-ui-default": {}
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+  welcome:
+    showOnStartup: false
