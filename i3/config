@@ -60,23 +60,11 @@ bindsym $mod+Shift+q kill
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -180,6 +168,5 @@ bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
 bindsym Print exec ksnapshot
 
 # Start xautolock to handle sleep and lock conditions
-exec xautolock -detectsleep \
-  -time 3 -locker "i3lock -d -e -f" \
-  -notify 30 -notifier "i3-nagbar -t warning -m 'LOCKING screen in 30 seconds'"
+bindsym $mod+l exec i3lock -d -e -f
+exec xautolock -detectsleep -time 3 -locker "i3lock -d -e -f"
