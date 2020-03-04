@@ -25,8 +25,7 @@
     userId: "0fe8d493-f82e-44ec-80de-9cf3c1fd1bbd"
   "git-blame":
     columnWidth: 341
-  "linter-ui-default":
-    showPanel: true
+  "linter-ui-default": {}
   minimap:
     plugins:
       "highlight-selected": true
