@@ -5,6 +5,9 @@
     minimumWordLength: 6
   core:
     audioBeep: false
+    disabledPackages: [
+      "linter-jenkins"
+    ]
     projectHome: "/home/harkness/Documents"
     telemetryConsent: "no"
     themes: [
@@ -22,7 +25,8 @@
     userId: "0fe8d493-f82e-44ec-80de-9cf3c1fd1bbd"
   "git-blame":
     columnWidth: 341
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   minimap:
     plugins:
       "highlight-selected": true

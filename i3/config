@@ -174,6 +174,3 @@ bindsym Print exec ksnapshot
 # Start xautolock to handle sleep and lock conditions
 bindsym $mod+l exec i3lock -d -e -f
 exec xautolock -detectsleep -time 3 -locker "i3lock -d -e -f"
-
-# Start compton
-exec /usr/bin/compton --config /home/sharkness/compton.conf
