@@ -27,6 +27,7 @@ linter-gcc
 linter-jenkins
 linter-manager
 linter-matlab
+linter-perl
 linter-shellcheck
 linter-ui-default
 linter-vhdl
@@ -44,4 +45,3 @@ seti-ui
 split-diff
 todo-show
 ultra-sync
-
