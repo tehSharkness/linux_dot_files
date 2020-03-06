@@ -45,15 +45,6 @@ interval = 5
 block = "sound"
 
 [[block]]
-block = "backlight"
-device = "intel_backlight"
-
-[[block]]
-block = "battery"
-driver = "upower"
-format = "{percentage}% {time}"
-
-[[block]]
 block = "time"
 interval = 60
 format = "%a %m/%d %R"
