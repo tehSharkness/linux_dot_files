@@ -8,7 +8,7 @@
     disabledPackages: [
       "linter-jenkins"
     ]
-    projectHome: "/home/harkness/Documents"
+    projectHome: "/home/sharkness/Documents"
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"

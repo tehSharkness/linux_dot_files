@@ -173,3 +173,6 @@ bindsym Print exec ksnapshot
 
 # Start xautolock to handle sleep and lock conditions
 bindsym $mod+l exec i3lock -d -e -f
+
+# Set the wallpaper
+exec --no-startup-id feh --bg-fill ~/Documents/Wallpaper/DarkSouls3_Irithyll.jpg
