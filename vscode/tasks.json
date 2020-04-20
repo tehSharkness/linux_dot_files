@@ -1,0 +1,20 @@
+{
+    // https://doc.int.aurora.tech/doc/editors/vscode.html
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "bazel",
+            "args": [
+                "build",
+                "localization/local_pose/evaluation:log_segments_to_csv",
+                "-c",
+                "dbg",
+            ],
+            "options": {
+                "cwd": "/home/sharkness/Documents/aurora_projects/av"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

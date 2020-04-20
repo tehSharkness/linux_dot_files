@@ -1,0 +1,37 @@
+{
+  "editor.defaultFormatter": "xaver.clang-format",
+  "editor.formatOnSave": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.heatmap.toggleMode": "window",
+  "terminal.integrated.cursorStyle": "line",
+  "files.autoSave": "afterDelay",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "python.formatting.autopep8Args": ["--max-line-length=100", "--ignore=E226"],
+  "python.linting.pycodestyleArgs": ["--max-line-length=100", "--ignore=E226"],
+  "C_Cpp.default.includePath": [
+    "/home/sharkness/Documents/aurora_projects/av",
+    "/home/sharkness/Documents/aurora_projects/av/bazel-genfiles/**",
+    "/home/sharkness/Documents/aurora_projects/av/third_party/**",
+    "/home/sharkness/.cache/bazel/_bazel_sharkness/60f16a5fffb75c28e524c318b9fed768/external/**"
+  ],
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.cppStandard": "c++14",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "python.autoComplete.extraPaths": [
+    "/home/sharkness/Documents/aurora_projects/av",
+    "/home/sharkness/Documents/aurora_projects/av/bazel-bin",
+    "/home/sharkness/Documents/aurora_projects/av/bazel-genfiles"
+  ],
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 72,
+  "editor.rulers": [72],
+  "workbench.colorTheme": "Solarized Dark",
+  "explorer.confirmDelete": false
+}
