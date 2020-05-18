@@ -14,6 +14,7 @@
   "python.linting.pycodestyleArgs": ["--max-line-length=100", "--ignore=E226"],
   "C_Cpp.default.includePath": [
     "/home/sharkness/Documents/aurora_projects/av",
+    "/home/sharkness/Documents/aurora_projects/av/lidar/**",
     "/home/sharkness/Documents/aurora_projects/av/bazel-genfiles/**",
     "/home/sharkness/Documents/aurora_projects/av/third_party/**",
     "/home/sharkness/.cache/bazel/_bazel_sharkness/60f16a5fffb75c28e524c318b9fed768/external/**"
