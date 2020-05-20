@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=xautolock -detectsleep -time 3 -locker "i3lock -d -e -f"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=XAutoLock
+Name=XAutoLock
+Comment[en_US]=Lock the screen
+Comment=Lock the screen
