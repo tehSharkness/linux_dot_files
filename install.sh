@@ -2,18 +2,34 @@
 
 cd /tmp
 
+sudo apt-get update -y
+
+sudo apt-get install -y \
+  apt-transport-https \
+  ca-certificates \
+  curl \
+  wget \
+  gnupg-agent \
+  software-properties-common
+
 # Add apt keys
+## Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
 ## Atom
 wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 
 ## Dropbox
-sudo sh -c 'echo "deb https://linux.dropbox.com/ubuntu beaver main" >> /etc/apt/sources.list'
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
 # Add ppa's
+sudo sh -c 'echo "deb https://linux.dropbox.com/ubuntu beaver main" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 sudo add-apt-repository -y ppa:regolith-linux/release
 sudo add-apt-repository -y ppa:git-core/ppa
+sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
 
 sudo apt-get update -y
 
@@ -22,6 +38,9 @@ sudo apt-get install -y \
   zsh \
   firefox \
   dropbox \
+  docker-ce \
+  docker-ce-cli \
+  containerd.io \
   terminator \
   git \
   ksnapshot \
@@ -65,3 +84,8 @@ sudo pip install autorandr
 
 # Nomachine
 echo "Please follow instructions at https://www.nomachine.com/download/linux&id=1 to install NoMachine"
+
+# Docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
