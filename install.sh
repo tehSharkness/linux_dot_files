@@ -23,7 +23,7 @@ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
 # Add ppa's
-sudo sh -c 'echo "deb https://linux.dropbox.com/ubuntu beaver main" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb https://linux.dropbox.com/ubuntu $(lsb_release -cs) main" >> /etc/apt/sources.list'
 sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 sudo add-apt-repository -y ppa:regolith-linux/release
 sudo add-apt-repository -y ppa:git-core/ppa
