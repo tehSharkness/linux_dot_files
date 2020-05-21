@@ -1,5 +1,11 @@
 #!/bin/bash
 
+rm ~/.zshrc
+rm ~/.atom/config.cson
+
+mkdir -p ~/.atom
+mkdir -p ~/.config/terminato
+
 ln -s $(pwd)/.zshrc ~/.zshrc
 ln -s $(pwd)/atom/config.cson ~/.atom/config.cson
 
