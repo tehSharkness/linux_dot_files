@@ -57,10 +57,13 @@ sudo apt-get install -y \
 # i3lock \
 # xautolock \
 # j4-dmenu-desktop \
-# git clone https://github.com/greshake/i3status-rust
-# sudo apt-get install -y cargo
-# (cd i3status-rust && cargo build --release)
-# cp i3status-rust/target/release/i3status-rs /usr/local/bin/
+
+git clone https://github.com/greshake/i3status-rust
+sudo apt-get install -y cargo
+(cd i3status-rust && cargo build --release)
+chmod +x i3status-rust/target/release/i3status-rs
+sudo cp i3status-rust/target/release/i3status-rs /usr/local/bin/
+rm -r i3status-rust
 
 # oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
