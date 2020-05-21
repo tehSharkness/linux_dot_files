@@ -41,7 +41,6 @@ sudo apt-get install -y \
   containerd.io \
   terminator \
   git \
-  ksnapshot \
   shellcheck \
   fonts-font-awesome \
   fonts-powerline \
@@ -75,7 +74,6 @@ rm google-chrome*.deb
 sudo apt-get install -f
 
 # Anaconda
-sudo mkdir -p /opt/conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sudo ./Miniconda3-latest-Linux-x86_64.sh
 rm Miniconda3-latest-Linux-x86_64.sh
