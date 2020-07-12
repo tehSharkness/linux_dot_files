@@ -52,11 +52,6 @@ sudo apt-get install -y \
   i3xrocks-time \
   i3xrocks-battery
 
-# commented out while I try regolith
-# i3lock \
-# xautolock \
-# j4-dmenu-desktop \
-
 git clone https://github.com/greshake/i3status-rust
 sudo apt-get install -y cargo
 (cd i3status-rust && cargo build --release)
@@ -66,6 +61,9 @@ rm -r i3status-rust
 
 # oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+cp scripts/anaconda3.zsh ${HOME}/.oh-my-zsh/custom/
+cp scripts/git_large_files.zsh ${HOME}/.oh-my-zsh/custom/
+cp scripts/perl.zsh ${HOME}/.oh-my-zsh/custom/
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -88,3 +86,5 @@ echo "Please follow instructions at https://www.nomachine.com/download/linux&id=
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
+
+return 0
