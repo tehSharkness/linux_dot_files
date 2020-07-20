@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd /tmp
+cwd="$(pwd)"
+
+cd "$(mktemp)" || return 1
 
 sudo apt-get update -y
 
@@ -35,7 +37,6 @@ sudo apt-get install -y \
   atom \
   zsh \
   firefox \
-  dropbox \
   docker-ce \
   docker-ce-cli \
   containerd.io \
@@ -47,17 +48,15 @@ sudo apt-get install -y \
   redshift \
   feh \
   regolith-desktop \
-  i3xrocks-net-traffic \
-  i3xrocks-cpu-usage \
-  i3xrocks-time \
-  i3xrocks-battery
+  python3-pip \
+  timeshift
 
 git clone https://github.com/greshake/i3status-rust
-sudo apt-get install -y cargo
+sudo apt-get install -y cargo libdbus-1-dev
 (cd i3status-rust && cargo build --release)
 chmod +x i3status-rust/target/release/i3status-rs
 sudo cp i3status-rust/target/release/i3status-rs /usr/local/bin/
-rm -r i3status-rust
+rm -rf i3status-rust
 
 # oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -68,23 +67,26 @@ cp scripts/perl.zsh ${HOME}/.oh-my-zsh/custom/
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
-rm google-chrome*.deb
+rm -f google-chrome*.deb
 sudo apt-get install -f
 
 # Anaconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-sudo ./Miniconda3-latest-Linux-x86_64.sh
-rm Miniconda3-latest-Linux-x86_64.sh
+chmod + x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+rm -f Miniconda3-latest-Linux-x86_64.sh
 
 # autorandr
 sudo pip install autorandr
-
-# Nomachine
-echo "Please follow instructions at https://www.nomachine.com/download/linux&id=1 to install NoMachine"
 
 # Docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
+
+# Nomachine
+sensible-browser "https://www.nomachine.com/download/linux&id=1"
+
+cd "${cwd}" || return 2
 
 return 0
