@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cwd="$(pwd)"
-
-cd "$(mktemp)" || return 1
-
 sudo apt-get update -y
 
 sudo apt-get install -y \
@@ -52,30 +48,32 @@ sudo apt-get install -y \
   timeshift \
   okular
 
-git clone https://github.com/greshake/i3status-rust
-sudo apt-get install -y cargo libdbus-1-dev
-(cd i3status-rust && cargo build --release)
-chmod +x i3status-rust/target/release/i3status-rs
-sudo cp i3status-rust/target/release/i3status-rs /usr/local/bin/
-rm -rf i3status-rust
-
 # oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 cp scripts/anaconda3.zsh ${HOME}/.oh-my-zsh/custom/
 cp scripts/git_large_files.zsh ${HOME}/.oh-my-zsh/custom/
 cp scripts/perl.zsh ${HOME}/.oh-my-zsh/custom/
 
+cwd="$(pwd)"
+cd "$(mktemp)" || return 1
+
+git clone https://github.com/greshake/i3status-rust
+sudo apt-get install -y cargo libdbus-1-dev
+(cd i3status-rust && cargo build --release)
+chmod +x i3status-rust/target/release/i3status-rs
+sudo cp i3status-rust/target/release/i3status-rs /usr/local/bin/
+
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
-rm -f google-chrome*.deb
 sudo apt-get install -f
 
 # Anaconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-chmod + x Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
-rm -f Miniconda3-latest-Linux-x86_64.sh
+
+cd "${cwd}" || return 2
 
 # autorandr
 sudo pip install autorandr
@@ -87,7 +85,5 @@ newgrp docker
 
 # Nomachine
 sensible-browser "https://www.nomachine.com/download/linux&id=1"
-
-cd "${cwd}" || return 2
 
 return 0
