@@ -112,3 +112,6 @@ prompt_context() {
     prompt_segment $CURRENT_BG default
   fi
 }
+
+# Created by `userpath` on 2020-08-13 06:48:11
+export PATH="$PATH:/home/sharkness/.local/bin"

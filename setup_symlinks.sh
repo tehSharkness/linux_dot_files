@@ -17,4 +17,5 @@ rm -f "${HOME}/.config/regolith/i3/status.toml"
 ln -s "$(pwd)/regolith/config" "${HOME}/.config/regolith/i3/config"
 ln -s "$(pwd)/regolith/status.toml" "${HOME}/.config/regolith/i3/status.toml"
 
+mkdir -p "${HOME}/.config/autostart"
 ln -s "$(pwd)/autostart/dropbox.desktop" "${HOME}/.config/autostart/dropbox.desktop"
