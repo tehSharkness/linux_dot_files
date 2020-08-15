@@ -49,7 +49,8 @@ sudo apt-get install -y \
   feh \
   regolith-desktop \
   python3-pip \
-  timeshift
+  timeshift \
+  okular
 
 git clone https://github.com/greshake/i3status-rust
 sudo apt-get install -y cargo libdbus-1-dev
