@@ -17,7 +17,8 @@ brew install \
   kde-mac/kde/okular \
   kde-mac/kde/dolphin \
   kde-mac/kde/kf5-ktexteditor \
-  vim
+  vim \
+  openssh
 
 brew cask install \
   firefox \
