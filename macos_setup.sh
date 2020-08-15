@@ -15,7 +15,9 @@ brew install \
   redshift \
   python \
   kde-mac/kde/okular \
-  kde-mac/kde/dolphin
+  kde-mac/kde/dolphin \
+  kde-mac/kde/kf5-ktexteditor \
+  vim
 
 brew cask install \
   firefox \
@@ -25,11 +27,12 @@ brew cask install \
   microsoft-excel \
   microsoft-powerpoint \
   nomachine \
-  lingon-x
+  lingon-x \
+  discord
 
 # powerline
 (
-  cd "$(mktemp -d)" && \
+  cd "$(mktemp -d -t \'mytmpdir\')" && \
   git clone https://github.com/powerline/fonts.git --depth=1 && \
   cd fonts && \
   ./install.sh
