@@ -19,3 +19,4 @@ ln -s "$(pwd)/regolith/status.toml" "${HOME}/.config/regolith/i3/status.toml"
 
 mkdir -p "${HOME}/.config/autostart"
 ln -s "$(pwd)/autostart/dropbox.desktop" "${HOME}/.config/autostart/dropbox.desktop"
+ln -s "$(pwd)/autostart/redshift.desktop" "${HOME}/.config/autostart/redshift.desktop"
