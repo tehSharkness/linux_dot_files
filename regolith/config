@@ -329,6 +329,7 @@ floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
 for_window [instance="origin.exe"] floating enable
 for_window [instance="ealink.exe"] floating enable
+for_window [class="steam_app_1172380"] floating enable
 
 ###############################################################################
 # Window Resize and Gaps
