@@ -552,9 +552,3 @@ bindsym XF86MonBrightnessDown exec "xrandr --output eDP-1-1 --brightness $(( $(x
 ###############################################################################
 
 bindsym Print exec shutter
-
-###############################################################################
-# Misc
-###############################################################################
-
-for_window [instance="origin.exe"] floating enable
