@@ -1,28 +1,22 @@
 #!/bin/bash
 
-rm ~/.zshrc
-rm ~/.atom/config.cson
+rm "${HOME}/.zshrc"
+ln -s "$(pwd)/.zshrc" "${HOME}/.zshrc"
 
-mkdir -p ~/.atom
-mkdir -p ~/.config/terminator
+mkdir -p "${HOME}/.atom"
+rm -f "${HOME}/.atom/config.cson"
+ln -s "$(pwd)/atom/config.cson" "${HOME}/.atom/config.cson"
 
-ln -s $(pwd)/.zshrc ~/.zshrc
-ln -s $(pwd)/atom/config.cson ~/.atom/config.cson
+mkdir -p "${HOME}/.config/terminator"
+rm -f "${HOME}/.config/terminator/config"
+ln -s "$(pwd)/terminator/config" "${HOME}/.config/terminator/config"
 
-ln -s $(pwd)/autostart/* ~/.config/autostart/
-ln -s $(pwd)/terminator/config ~/.config/terminator/config
+mkdir -p "${HOME}/.config/regolith/i3"
+rm -f "${HOME}/.config/regolith/i3/config"
+rm -f "${HOME}/.config/regolith/i3/status.toml"
+ln -s "$(pwd)/regolith/config" "${HOME}/.config/regolith/i3/config"
+ln -s "$(pwd)/regolith/status.toml" "${HOME}/.config/regolith/i3/status.toml"
 
-mkdir -p ~/.config/regolith/i3
-
-rm ~/.config/regolith/i3/config
-rm ~/.config/regolith/i3/status.toml
-
-ln -s $(pwd)/regolith/config ~/.config/regolith/i3/config
-ln -s $(pwd)/regolith/status.toml ~/.config/regolith/i3/status.toml
-
-# commented out while I try out regolith
-# ln -s $(pwd)/i3/* ~/.config/i3/
-# ln -s $(pwd)/compton.conf ~/compton.conf
-
-# for compton, I think
-# sudo ln -s /lib/x86_64-linux-gnu/libpcre.so.3 /lib/x86_64-linux-gnu/libpcre.so.1
+mkdir -p "${HOME}/.config/autostart"
+ln -s "$(pwd)/autostart/dropbox.desktop" "${HOME}/.config/autostart/dropbox.desktop"
+ln -s "$(pwd)/autostart/redshift.desktop" "${HOME}/.config/autostart/redshift.desktop"

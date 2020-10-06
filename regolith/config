@@ -327,6 +327,9 @@ bindsym $mod+i bar mode toggle
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
+for_window [instance="origin.exe"] floating enable
+for_window [instance="ealink.exe"] floating enable
+for_window [class="steam_app_1172380"] floating enable
 
 ###############################################################################
 # Window Resize and Gaps
@@ -550,4 +553,4 @@ bindsym XF86MonBrightnessDown exec "xrandr --output eDP-1-1 --brightness $(( $(x
 # Print Screen
 ###############################################################################
 
-bindsym Print exec ksnapshot
+bindsym Print exec shutter
