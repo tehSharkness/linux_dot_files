@@ -22,3 +22,6 @@ tmpdir=$(mktemp -d)
 (cd ${tmpdir} && git clone "https://github.com/die-zuckerschnecke/proton-ge-custom-updater.git")
 chmod +x ${tmpdir}/proton-ge-custom-updater/proton-ge-custom-updater
 sudo cp ${tmpdir}/proton-ge-custom-updater/proton-ge-custom-updater /usr/local/bin
+
+# discord
+sudo snap install discord
