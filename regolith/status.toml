@@ -24,18 +24,13 @@ interval = 1
 [[block]]
 block = "net"
 device = "eth0"
-ip = true
-speed_up = false
-speed_down = false
+format = "{ip}"
 interval = 5
 
 [[block]]
 block = "net"
 device = "wlan0"
-ip = true
-ssid = true
-speed_up = false
-speed_down = false
+format = "{ip} {ssid}"
 interval = 5
 
 [[block]]
