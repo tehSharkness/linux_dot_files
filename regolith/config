@@ -534,7 +534,7 @@ exec --no-startup-id $i3-wm.program.3
 
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
 bindsym XF86AudioNext exec mpc next
