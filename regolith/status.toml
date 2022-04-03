@@ -14,8 +14,6 @@ alert = 10.0
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
 
 [[block]]
 block = "cpu"
@@ -23,13 +21,13 @@ interval = 1
 
 [[block]]
 block = "net"
-device = "eth0"
+device = "enp14s0"
 format = "{ip}"
 interval = 5
 
 [[block]]
 block = "net"
-device = "wlan0"
+device = "wlp17s0"
 format = "{ip} {ssid}"
 interval = 5
 

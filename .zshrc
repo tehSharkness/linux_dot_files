@@ -116,4 +116,4 @@ prompt_context() {
 }
 
 # Created by `userpath` on 2020-08-13 06:48:11
-export PATH="$PATH:${HOME}/.local/bin"
+export PATH="$PATH:${HOME}/.local/bin:${HOME}/.cargo/bin"
