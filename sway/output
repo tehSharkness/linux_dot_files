@@ -12,3 +12,5 @@
 
 output DisplayPort-0 resolution 2560x1440 pos 1080 0 adaptive_sync on
 output HDMI-A-1 resolution 1920x1080 pos 0 0 transform 270
+
+exec_always set-primary-monitor
