@@ -18,7 +18,7 @@ set $term terminator
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu bash -c "source /etc/profile.d/apps-bin-path.sh; wofi --show drun -G" | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -32,17 +32,17 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output DisplayPort-0 resolution 2560x1440 pos 1080 0 adaptive_sync on
-output HDMI-A-1 resolution 1920x1080 pos 0 0 transform 270
+output DisplayPort-0 resolution 2560x1440 pos 0 0 adaptive_sync on
+output HDMI-A-1 resolution 1920x1080 pos -1080 0 transform 270
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -182,6 +182,12 @@ output HDMI-A-1 resolution 1920x1080 pos 0 0 transform 270
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+#
+# Appearance:
+#
+    default_border none
+    default_floating_border none
+
 #
 # Scratchpad:
 #
