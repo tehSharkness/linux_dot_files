@@ -59,6 +59,18 @@ exec swayidle -w\
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    ## Session // Reboot // <><Shift> b ##
+    bindsym $mod+Shift+b exec reboot
+
+    ## Session // Power Down // <><Shift> p ##
+    bindsym $mod+Shift+p exec shutdown
+
+    ## Session // Lock Screen // <> Escape ##
+    bindsym $mod+Escape exec swaylock -f -C ~/.config/swaylock/config'
+
+    ## Session // Sleep // <><Shift> s ##
+    bindsym $mod+Shift+s exec systemctl suspend
+
 #
 # Moving around:
 #
