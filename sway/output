@@ -10,7 +10,8 @@
 #   input "1386:884:Wacom_Intuos_S_Pad" map_to_output HDMI-A-1
 #   input "1386:884:Wacom_Intuos_S_Pen" map_to_output HDMI-A-1
 
-output DisplayPort-0 resolution 2560x1440 pos 1080 0 adaptive_sync on
+output DP-1 resolution 2560x1440 pos 1080 0 adaptive_sync on
 output HDMI-A-1 resolution 1920x1080 pos 0 0 transform 270
+output DP-3 resolution 1920x1080 pos 3640 0 transform 270
 
 exec_always set-primary-monitor
