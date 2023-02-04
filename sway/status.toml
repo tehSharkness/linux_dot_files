@@ -20,6 +20,11 @@ block = "cpu"
 interval = 1
 
 [[block]]
+block = "temperature"
+chip = "*-isa-*"
+interval = 1
+
+[[block]]
 block = "net"
 device = "enp14s0"
 format = "{ip}"
